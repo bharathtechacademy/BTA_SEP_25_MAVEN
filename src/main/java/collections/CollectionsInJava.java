@@ -77,6 +77,8 @@ public class CollectionsInJava {
 		//Tree ==> Sorted / Ascending
 		
 		/*********** Wrapper Classes ************/
+		
+		//Wrapper classes are used to convert primitive data types into objects
 		//byte --> Byte
 		//short --> Short
 		//int --> Integer

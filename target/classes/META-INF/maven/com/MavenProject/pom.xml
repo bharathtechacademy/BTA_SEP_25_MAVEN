@@ -8,7 +8,7 @@
 
 	<dependencies>
 
-		<!--https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!-- selenium-java for browser automation-->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -40,6 +40,14 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>42.7.8</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.11.0</version>
+			<scope>test</scope>
 		</dependency>
 
 	</dependencies>
