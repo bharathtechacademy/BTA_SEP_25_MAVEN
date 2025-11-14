@@ -26,15 +26,15 @@ public class IfElseConditionalStatements {
 	public static void main(String[] args) {
 
 		// main if-else
-		boolean isRajniMovieAvailable = true;
-		boolean isAlluArjunMovieAvailable = false;
-		boolean isChiruMovieAvailable = false;
+		boolean isPrabashMovieAvailable = true;
+		boolean isMaheshMovieAvailable = false;
+		boolean isVenkyMovieAvailable = false;
 
 		// nested if else
 		boolean isReclinersAvailable = false;
 		boolean isBolconyAvailable = true;
 
-		if (isRajniMovieAvailable) {
+		if (isPrabashMovieAvailable) {
 			System.out.println("Watch Rajni Movie");
 
 			if (isReclinersAvailable) {
@@ -45,9 +45,9 @@ public class IfElseConditionalStatements {
 				System.out.println("Sit in Normal Seat");
 			}
 
-		} else if (isAlluArjunMovieAvailable) {
+		} else if (isMaheshMovieAvailable) {
 			System.out.println("Watch Allu Arjun Movie");
-		} else if (isChiruMovieAvailable) {
+		} else if (isVenkyMovieAvailable) {
 			System.out.println("Watch Chiru Movie");
 		} else {
 			System.out.println("Watch Web Series at Home");
