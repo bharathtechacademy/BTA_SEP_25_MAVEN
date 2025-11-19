@@ -62,7 +62,7 @@ public class WebActions5 {
 		return destination;
 	}
 
-	// Method to capture screenshot of browser window
+	// Method to capture screenshot of webelement
 	public static String getElementScreenshot(WebElement element, String fileName) throws IOException {
 		String destination = System.getProperty("user.dir") + "\\Screenshots\\" + fileName + ".png";
 		File screenshotFile = element.getScreenshotAs(OutputType.FILE);
