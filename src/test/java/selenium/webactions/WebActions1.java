@@ -1,6 +1,7 @@
 package selenium.webactions;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -90,12 +91,41 @@ public class WebActions1 {
 		wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//b[text()='Settings saved successfully.']"), 0));
 				
 //		18.Click on Services Link
+		WebElement servicesLink = driver.findElement(By.xpath("//ul[@class='leftmenu']//a[text()='Services']"));
+		servicesLink.click();
+		
 //		19.Wait for Services page
+		wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//span[text()='Bookstore services:']"), 0));
+		
 //		20.Scroll-down till Bookstore services
+		WebElement bookstoreServices = driver.findElement(By.xpath("//span[text()='Bookstore services:']"));
+		js.executeScript("arguments[0].scrollIntoView(true);", bookstoreServices);
+		
 //		21.Get total rows, columns in the bookstore service table
+		List<WebElement> rows = driver.findElements(By.xpath("//span[text()='Bookstore services:']/following-sibling::table[1]//tr"));
+		List<WebElement> columns = driver.findElements(By.xpath("//span[text()='Bookstore services:']/following-sibling::table[1]//tr[1]/td"));
+		int totalROws = rows.size();
+		int totalColumns = columns.size();
+		System.out.println("Total Rows: " + totalROws);
+		System.out.println("Total Columns: " + totalColumns);
+		
 //		22.Get Column headers of book store services table
+		for(int i=1; i<=totalColumns; i++) {
+			WebElement columnHeader = driver.findElement(By.xpath("//span[text()='Bookstore services:']/following-sibling::table[1]//tr[1]//td["+i+"]"));
+			System.out.println("Column " + i + " Header: " + columnHeader.getText());
+		}
+		
 //		23.Get all the data from book store service table
+		for(int r=1;r<=totalROws;r++) {
+			for(int c=1;c<=totalColumns;c++) {
+				WebElement cellData = driver.findElement(By.xpath("//span[text()='Bookstore services:']/following-sibling::table[1]//tr["+r+"]//td["+c+"]"));
+				System.out.println("Row "+r+" Column "+c+" Data: " + cellData.getText());
+			}
+			
+		}
+		
 //		24.Close browser window
+		driver.quit();
 	}
 	
 	public static void selectDataAccessMode(String mode) {

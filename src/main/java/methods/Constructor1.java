@@ -14,20 +14,20 @@ public class Constructor1 {
 
 	
 	//Before Parameterized Constructor
-//	void printEmployeeName(int empid, String empname) {
-//		System.out.println("Employee ID: " + empid);
-//		System.out.println("Employee Name: " + empname);
-//	}
-//	
-//	void printEmployeeAddress(int empid, String empaddress) {
-//		System.out.println("Employee ID: " + empid);
-//		System.out.println("Employee Address: " + empaddress);
-//	}
-//	
-//	void printEmployeeSalary(int empid, double empsalary) {
-//		System.out.println("Employee ID: " + empid);
-//		System.out.println("Employee Salary: " + empsalary);
-//	}
+	void printEmployeeName(int empid, String empname) {
+		System.out.println("Employee ID: " + empid);
+		System.out.println("Employee Name: " + empname);
+	}
+	
+	void printEmployeeAddress(int empid, String empaddress) {
+		System.out.println("Employee ID: " + empid);
+		System.out.println("Employee Address: " + empaddress);
+	}
+	
+	void printEmployeeSalary(int empid, double empsalary) {
+		System.out.println("Employee ID: " + empid);
+		System.out.println("Employee Salary: " + empsalary);
+	}
 	
 	
 	// parameterized constructor
