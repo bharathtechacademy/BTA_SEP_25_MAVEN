@@ -1,27 +1,11 @@
 package framework.concepts;
 
-public class TestClass {
-
-	// 1. Verify login with valid and invalid credentials.
-	// 2. Verify fund transfer
-	// 3. Verify account balance
-	
-	//Challenges with basic framework
-	
-	// 1. We cannot run each and every test case independently.
-	// 2. We cannot execute specific test cases.
-	// 3. So we cannot group the test cases.
-	// 4. Test case prioritization is also not possible.
-	// 5. Calling the same methods again and again repeatedly for each and every test case.
-	// 6. No test results reporting.
-	// 7. Dependency test is not possible.
+public class TestClass extends AppCommons {
 
 	public static void main(String[] args) {
 
-		AppCommons app = new AppCommons();
 		WebCommons web = new WebCommons();
-
-		web.startReporting();
+		AppCommons app = new AppCommons();
 
 		// Test Case 1 - Verify login with valid credentials.
 		System.out.println("********** Test Case 1 - Verify login with valid credentials. **********");

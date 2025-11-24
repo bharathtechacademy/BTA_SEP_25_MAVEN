@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="4" passed="0" failed="0" skipped="2">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-11-24T21:28:01 IST" name="Suite" finished-at="2025-11-24T21:28:01 IST" duration-ms="125">
+    <groups>
+      <group name="Sanity">
+        <method signature="AppCommons.verifyLoanBalance()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" name="verifyLoanBalance" class="testng.framework.concepts.AppCommons"/>
+        <method signature="AppCommons.verifyFundTransfer()[pri:2, instance:testng.framework.concepts.AppCommons@3d285d7e]" name="verifyFundTransfer" class="testng.framework.concepts.AppCommons"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="AppCommons.verifyFundTransfer()[pri:2, instance:testng.framework.concepts.AppCommons@3d285d7e]" name="verifyFundTransfer" class="testng.framework.concepts.AppCommons"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2025-11-24T21:28:01 IST" name="Test" finished-at="2025-11-24T21:28:01 IST" duration-ms="125">
+      <class name="testng.framework.concepts.AppCommons">
+        <test-method is-config="true" signature="startReporting()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="startReporting" finished-at="2025-11-24T21:28:01 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReporting -->
+        <test-method is-config="true" signature="launchBrowserAndApplication(java.lang.String,java.lang.String)[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="launchBrowserAndApplication" finished-at="2025-11-24T21:28:01 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[www.icici.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowserAndApplication -->
+        <test-method is-config="true" signature="login(java.lang.String,java.lang.String)[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="login" finished-at="2025-11-24T21:28:01 IST" depends-on-methods="testng.framework.concepts.WebCommons.launchBrowserAndApplication" duration-ms="7" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bharath]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Bharath123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Intentional Failure to test dependsOnMethods behavior]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Intentional Failure to test dependsOnMethods behavior
+at org.testng.Assert.fail(Assert.java:111)
+at testng.framework.concepts.AppCommons.login(AppCommons.java:14)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="verifyApplicationHomePage()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="verifyApplicationHomePage" finished-at="2025-11-24T21:28:01 IST" depends-on-methods="testng.framework.concepts.WebCommons.launchBrowserAndApplication, testng.framework.concepts.AppCommons.login" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyApplicationHomePage -->
+        <test-method signature="verifyLoanBalance()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="verifyLoanBalance" finished-at="2025-11-24T21:28:01 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Intentional Failure to test dependsOnMethods behavior]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Intentional Failure to test dependsOnMethods behavior
+at org.testng.Assert.fail(Assert.java:111)
+at testng.framework.concepts.AppCommons.login(AppCommons.java:14)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoanBalance -->
+        <test-method is-config="true" signature="logoutFromApplication()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="logoutFromApplication" finished-at="2025-11-24T21:28:01 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromApplication -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="closeApplication" finished-at="2025-11-24T21:28:01 IST" depends-on-methods="testng.framework.concepts.AppCommons.logoutFromApplication" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="closeBrowser" finished-at="2025-11-24T21:28:01 IST" depends-on-methods="closeApplication" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowserAndApplication(java.lang.String,java.lang.String)[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="launchBrowserAndApplication" finished-at="2025-11-24T21:28:01 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[www.icici.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowserAndApplication -->
+        <test-method is-config="true" signature="login(java.lang.String,java.lang.String)[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="login" finished-at="2025-11-24T21:28:01 IST" depends-on-methods="testng.framework.concepts.WebCommons.launchBrowserAndApplication" duration-ms="1" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bharath]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Bharath123]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Intentional Failure to test dependsOnMethods behavior]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Intentional Failure to test dependsOnMethods behavior
+at org.testng.Assert.fail(Assert.java:111)
+at testng.framework.concepts.AppCommons.login(AppCommons.java:14)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="verifyApplicationHomePage()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="verifyApplicationHomePage" finished-at="2025-11-24T21:28:01 IST" depends-on-methods="testng.framework.concepts.WebCommons.launchBrowserAndApplication, testng.framework.concepts.AppCommons.login" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyApplicationHomePage -->
+        <test-method signature="verifyFundTransfer()[pri:2, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="verifyFundTransfer" finished-at="2025-11-24T21:28:01 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Intentional Failure to test dependsOnMethods behavior]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Intentional Failure to test dependsOnMethods behavior
+at org.testng.Assert.fail(Assert.java:111)
+at testng.framework.concepts.AppCommons.login(AppCommons.java:14)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFundTransfer -->
+        <test-method is-config="true" signature="logoutFromApplication()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="logoutFromApplication" finished-at="2025-11-24T21:28:01 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromApplication -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="closeApplication" finished-at="2025-11-24T21:28:01 IST" depends-on-methods="testng.framework.concepts.AppCommons.logoutFromApplication" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="closeBrowser" finished-at="2025-11-24T21:28:01 IST" depends-on-methods="closeApplication" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="stopReporting()[pri:0, instance:testng.framework.concepts.AppCommons@3d285d7e]" started-at="2025-11-24T21:28:01 IST" name="stopReporting" finished-at="2025-11-24T21:28:01 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopReporting -->
+      </class> <!-- testng.framework.concepts.AppCommons -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
