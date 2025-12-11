@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Training\Sep_2025_8PM\AutomationTraining\MavenProject\TestRunner\TestSuiteWithGroups.xml</span>
+                    <span>C:\Training\Sep_2025_8PM\AutomationTraining\MavenProject\TestRunner\TestSuiteWithListeners.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>2 groups</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,10 +92,24 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  2 skipped,  </span>
+                    <span class="method-stats">9 methods, 1 failed,  2 skipped,  6 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="verifyFundTransfer">verifyFundTransfer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
                     <span class="show-or-hide-methods skipped">
                       <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
                       <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
@@ -108,10 +122,49 @@
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="verifyLoanBalance">verifyLoanBalance</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="verifyFundTransfer">verifyFundTransfer</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="calculateEMI(750000, 8.0, 20)">calculateEMI(750000, 8.0, 20)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="calculateEMI(500000, 7.5, 15)">calculateEMI(500000, 7.5, 15)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="calculateEMI(1000000, 6.5, 10)">calculateEMI(1000000, 6.5, 10)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="verifyAccountBalance">verifyAccountBalance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="verifyAccountBalance">verifyAccountBalance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="verifyAccountBalance">verifyAccountBalance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -123,6 +176,29 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testng.framework.concepts.AppCommons</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFundTransfer">
+                  </a> <!-- verifyFundTransfer -->
+                  <span class="method-name">verifyFundTransfer</span>
+                  <div class="stack-trace">java.lang.AssertionError: Intentional Failure to test RetryAnalyzer behavior
+	at testng.framework.concepts.AppCommons.verifyFundTransfer(AppCommons.java:36)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 7 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -134,51 +210,103 @@
                   <a name="verifyFundTransfer">
                   </a> <!-- verifyFundTransfer -->
                   <span class="method-name">verifyFundTransfer</span>
-                  <div class="stack-trace">java.lang.AssertionError: Intentional Failure to test dependsOnMethods behavior
-	at testng.framework.concepts.AppCommons.login(AppCommons.java:14)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames
+                  <div class="stack-trace">java.lang.AssertionError: Intentional Failure to test RetryAnalyzer behavior
+	at testng.framework.concepts.AppCommons.verifyFundTransfer(AppCommons.java:36)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 7 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyLoanBalance">
-                  </a> <!-- verifyLoanBalance -->
-                  <span class="method-name">verifyLoanBalance</span>
-                  <div class="stack-trace">java.lang.AssertionError: Intentional Failure to test dependsOnMethods behavior
-	at testng.framework.concepts.AppCommons.login(AppCommons.java:14)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames
+                  <a name="verifyFundTransfer">
+                  </a> <!-- verifyFundTransfer -->
+                  <span class="method-name">verifyFundTransfer</span>
+                  <div class="stack-trace">java.lang.AssertionError: Intentional Failure to test RetryAnalyzer behavior
+	at testng.framework.concepts.AppCommons.verifyFundTransfer(AppCommons.java:36)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 7 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testng.framework.concepts.AppCommons</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="calculateEMI(750000, 8.0, 20)">
+                  </a> <!-- calculateEMI(750000, 8.0, 20) -->
+                  <span class="method-name">calculateEMI</span>
+                  <span class="parameters">(750000,8.0,20)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="calculateEMI(500000, 7.5, 15)">
+                  </a> <!-- calculateEMI(500000, 7.5, 15) -->
+                  <span class="method-name">calculateEMI</span>
+                  <span class="parameters">(500000,7.5,15)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="calculateEMI(1000000, 6.5, 10)">
+                  </a> <!-- calculateEMI(1000000, 6.5, 10) -->
+                  <span class="method-name">calculateEMI</span>
+                  <span class="parameters">(1000000,6.5,10)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAccountBalance">
+                  </a> <!-- verifyAccountBalance -->
+                  <span class="method-name">verifyAccountBalance</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAccountBalance">
+                  </a> <!-- verifyAccountBalance -->
+                  <span class="method-name">verifyAccountBalance</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAccountBalance">
+                  </a> <!-- verifyAccountBalance -->
+                  <span class="method-name">verifyAccountBalance</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Training\Sep_2025_8PM\AutomationTraining\MavenProject\TestRunner\TestSuiteWithGroups.xml</span>
+            <span class="header-content">C:\Training\Sep_2025_8PM\AutomationTraining\MavenProject\TestRunner\TestSuiteWithListeners.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;groups&gt;
-    &lt;run&gt;
-      &lt;include name=&quot;Sanity&quot;/&gt;
-    &lt;/run&gt;
-  &lt;/groups&gt;
-  &lt;groups&gt;
-    &lt;run&gt;
-      &lt;include name=&quot;Sanity&quot;/&gt;
-    &lt;/run&gt;
-  &lt;/groups&gt;
   &lt;parameter name=&quot;BROWSER&quot; value=&quot;Chrome&quot;/&gt;
   &lt;parameter name=&quot;PASSWORD&quot; value=&quot;Bharath123&quot;/&gt;
   &lt;parameter name=&quot;USER&quot; value=&quot;Bharath&quot;/&gt;
   &lt;parameter name=&quot;APP_URL&quot; value=&quot;www.icici.com&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;testng.framework.concepts.TestListerners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testng.framework.concepts.AppCommons&quot;/&gt;
@@ -209,6 +337,14 @@
               <span class="test-group-name">Regression</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">calculateEMI</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyAccountBalance</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifyFundTransfer</span>
                 <br/>
               </div> <!-- method-in-group -->
@@ -220,8 +356,12 @@
                 <span class="method-in-group-name">verifyFundTransfer</span>
                 <br/>
               </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Smoke</span>
+              <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">verifyLoanBalance</span>
+                <span class="method-in-group-name">calculateEMI</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -241,20 +381,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyLoanBalance')
+data.setCell(0, 1, 'calculateEMI')
 data.setCell(0, 2, 'testng.framework.concepts.AppCommons')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 48);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyFundTransfer')
 data.setCell(1, 2, 'testng.framework.concepts.AppCommons')
-data.setCell(1, 3, 0);
+data.setCell(1, 3, 18);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyAccountBalance')
+data.setCell(2, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(2, 3, 12);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyFundTransfer')
+data.setCell(3, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(3, 3, 6);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'calculateEMI')
+data.setCell(4, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(4, 3, 3);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyFundTransfer')
+data.setCell(5, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(5, 3, 3);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyAccountBalance')
+data.setCell(6, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(6, 3, 2);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'calculateEMI')
+data.setCell(7, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(7, 3, 2);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyAccountBalance')
+data.setCell(8, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(8, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 95 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -269,15 +437,13 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">testng.framework.concepts.AppCommons</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">calculateEMI</span>
-                <br/>
-                <span class="ignored-method-name">verifyAccountBalance</span>
+                <span class="ignored-method-name">verifyLoanBalance</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -296,59 +462,261 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">launchBrowserAndApplication(Chrome, www.icici.com)</span>
-                <span class="method-start">68 ms</span>
+                <span class="method-start">142 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">login(Bharath, Bharath123)</span>
-                <span class="method-start">80 ms</span>
+                <span class="method-start">161 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">verifyApplicationHomePage</span>
-                <span class="method-start">97 ms</span>
+                <span class="method-start">165 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAccountBalance</span>
+                <span class="method-start">167 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logoutFromApplication</span>
-                <span class="method-start">109 ms</span>
+                <span class="method-start">189 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">closeApplication</span>
-                <span class="method-start">110 ms</span>
+                <span class="method-start">192 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">111 ms</span>
+                <span class="method-start">193 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchBrowserAndApplication(Chrome, www.icici.com)</span>
-                <span class="method-start">124 ms</span>
+                <span class="method-start">198 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">login(Bharath, Bharath123)</span>
-                <span class="method-start">125 ms</span>
+                <span class="method-start">199 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">verifyApplicationHomePage</span>
-                <span class="method-start">131 ms</span>
+                <span class="method-start">200 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAccountBalance</span>
+                <span class="method-start">201 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logoutFromApplication</span>
-                <span class="method-start">139 ms</span>
+                <span class="method-start">206 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">closeApplication</span>
-                <span class="method-start">140 ms</span>
+                <span class="method-start">207 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">141 ms</span>
+                <span class="method-start">208 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.icici.com)</span>
+                <span class="method-start">210 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login(Bharath, Bharath123)</span>
+                <span class="method-start">210 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">211 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAccountBalance</span>
+                <span class="method-start">212 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">218 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">219 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">222 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.icici.com)</span>
+                <span class="method-start">234 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login(Bharath, Bharath123)</span>
+                <span class="method-start">235 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyFundTransfer</span>
+                <span class="method-start">237 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">237 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">260 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">261 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">262 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.icici.com)</span>
+                <span class="method-start">265 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login(Bharath, Bharath123)</span>
+                <span class="method-start">267 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">270 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyFundTransfer</span>
+                <span class="method-start">272 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">283 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">284 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">284 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.icici.com)</span>
+                <span class="method-start">286 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login(Bharath, Bharath123)</span>
+                <span class="method-start">288 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyFundTransfer</span>
+                <span class="method-start">289 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">289 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">295 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">295 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">296 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.icici.com)</span>
+                <span class="method-start">307 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login(Bharath, Bharath123)</span>
+                <span class="method-start">308 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">309 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">calculateEMI(500000, 7.5, 15)</span>
+                <span class="method-start">311 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">362 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">363 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">364 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.icici.com)</span>
+                <span class="method-start">365 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login(Bharath, Bharath123)</span>
+                <span class="method-start">366 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">calculateEMI(750000, 8.0, 20)</span>
+                <span class="method-start">367 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">367 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">373 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">374 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">374 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.icici.com)</span>
+                <span class="method-start">375 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login(Bharath, Bharath123)</span>
+                <span class="method-start">376 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">377 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">calculateEMI(1000000, 6.5, 10)</span>
+                <span class="method-start">378 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">389 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">392 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">394 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopReporting</span>
-                <span class="method-start">407 ms</span>
+                <span class="method-start">559 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

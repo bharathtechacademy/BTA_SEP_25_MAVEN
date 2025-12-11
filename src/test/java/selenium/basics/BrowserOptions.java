@@ -15,6 +15,7 @@ public class BrowserOptions {
 		options.addArguments("--disable-notifications");
 		options.addArguments("--allow-notifications");
 		options.addArguments("--headless");
+		options.addArguments("--ignore-certificate-errors");
 
 //		1. Launch the Browser window (Browser = Chrome)    
 		WebDriver driver = new ChromeDriver(options);

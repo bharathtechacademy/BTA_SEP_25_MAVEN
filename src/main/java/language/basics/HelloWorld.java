@@ -54,10 +54,19 @@ public class HelloWorld {
 		logger.warning("There is a warning at Line 50");
 				
 		// Print the Logs into text file for exporting the logs
-		PrintWriter logs = new PrintWriter("C:\\Training\\Sep_2025_8PM\\AutomationTraining\\JavaTraining\\Logs.txt");
-		logs.println(LocalDateTime.now()+"Line 57 is Executed");
-		logs.println(LocalDateTime.now()+"Line 58 is Completed");
-		logs.close();
+//		PrintWriter logs = new PrintWriter("C:\\Training\\Sep_2025_8PM\\AutomationTraining\\JavaTraining\\Logs.txt");
+//		logs.println(LocalDateTime.now()+"Line 57 is Executed");
+//		logs.println(LocalDateTime.now()+"Line 58 is Completed");
+//		logs.close();
+		
+		//Multi-line string printing (Java 15+ Text Block)
+        String message = """
+                7) This is a multiline text block.
+                Line 1
+                Line 2
+                Line 3
+                """;
+        System.out.println(message);
 		
 		
 	}

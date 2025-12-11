@@ -5,18 +5,15 @@
   <parameter name="PASSWORD" value="Bharath123"/>
   <parameter name="USER" value="Bharath"/>
   <parameter name="APP_URL" value="www.icici.com"/>
+  <listeners>
+    <listener class-name="testng.framework.concepts.TestListerners"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
-    <groups>
-      <run>
-        <include name="Sanity"/>
-      </run>
-    </groups>
     <classes>
       <class name="testng.framework.concepts.AppCommons">
         <methods>
-          <include name="stopReporting"/>
           <include name="closeApplication"/>
-          <include name="verifyLoanBalance"/>
+          <include name="stopReporting"/>
           <include name="logoutFromApplication"/>
           <include name="login"/>
           <include name="launchBrowserAndApplication"/>

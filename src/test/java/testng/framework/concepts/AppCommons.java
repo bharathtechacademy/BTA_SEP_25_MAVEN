@@ -30,18 +30,20 @@ public class AppCommons extends WebCommons{
 	public void verifyApplicationHomePage() {
 		System.out.println("Application home page is verified successfully.");
 	}	
-	
-	@Test(priority=2, groups= {"Regression","Sanity"})
-	public void verifyFundTransfer() {
+		
+	@Test(priority=2, groups= {"Regression","Sanity"}, timeOut=6000, retryAnalyzer = RetryTest.class)
+	public void verifyFundTransfer() throws InterruptedException {
+		Assert.fail("Intentional Failure to test RetryAnalyzer behavior");
+		Thread.sleep(5000); // Simulating some processing time
 		System.out.println("Fund transfer is verified successfully.");
 	}
 	
-	@Test(priority=-1,groups= {"Regression"})
+	@Test(priority=-1,groups= {"Regression"}, invocationCount=3)
 	public void verifyAccountBalance() {
 		System.out.println("Account balance is verified successfully.");
 	}
 	
-	@Test(groups= {"Sanity"})
+	@Test(groups= {"Sanity"}, enabled=false)
 	public void verifyLoanBalance() {
 		System.out.println("Loan balance is verified successfully.");
 	}
